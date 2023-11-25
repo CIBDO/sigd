@@ -12,7 +12,7 @@ class CvController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.CV.liste');
     }
 
     /**
@@ -20,7 +20,7 @@ class CvController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.CV.importe');
     }
 
     /**

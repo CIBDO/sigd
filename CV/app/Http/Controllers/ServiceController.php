@@ -12,7 +12,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+//        dd(\request('type'));
+        return view('pages.Services.index');
     }
 
     /**
