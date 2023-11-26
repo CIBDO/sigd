@@ -3,7 +3,7 @@
 <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>Liste des CV</h4>
+                <h4>Liste des CV de l'ACCT</h4>
             </div>
         </div>
  <div class="table-responsive">
