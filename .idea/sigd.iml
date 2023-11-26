@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CV/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/CV/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/CV/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/CV/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/CV/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/CV/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
@@ -120,6 +120,7 @@
       <excludeFolder url="file://$MODULE_DIR$/CV/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/CV/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/CV/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/CV/vendor/hepplerdotnet/flash-toastr" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

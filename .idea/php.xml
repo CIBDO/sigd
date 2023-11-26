@@ -123,6 +123,7 @@
       <path value="$PROJECT_DIR$/CV/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/CV/vendor/laravel/prompts" />
       <path value="$PROJECT_DIR$/CV/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/CV/vendor/hepplerdotnet/flash-toastr" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
