@@ -11,33 +11,52 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-4 col-12">
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label>Matricule</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Prénom</label>
                             <input type="text">
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4 col-12">
+                    <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
                             <label>Nom</label>
                             <input type="text">
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4 col-12">
+                    <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
-                            <label>Numero experienceMatricule</label>
+                            <label>Sexe</label>
                             <input type="text">
                         </div>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
-                            <label>Description</label>
-                            <textarea class="form-control"></textarea>
+                            <label>Servie</label>
+                            <input type="text">
                         </div>
                     </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label>Grade</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label>Corps</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label> Product Image</label>
+                            <label> Fichier </label>
                             <div class="image-upload">
                                 <input type="file">
                                 <div class="image-uploads">
@@ -48,8 +67,8 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
-                        <a href="categorylist.html" class="btn btn-cancel">Cancel</a>
+                        <a href="javascript:void(0);" class="btn btn-submit me-2">Charger</a>
+                        <a href="categorylist.html" class="btn btn-cancel">Quitter</a>
                     </div>
                 </div>
             </div>
