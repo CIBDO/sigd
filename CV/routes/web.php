@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CvController;
+use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingsController;
@@ -29,3 +30,4 @@ Route::post('users-add', [UserController::class, 'store'])->name('users-store');
 Route::get('users-list', [UserController::class, 'index'])->name('users-list');
 Route::get('setting-add-service', [SettingsController::class, 'serviceCreate'])->name('service-create');
 Route::post('setting-add-service', [HomeController::class, 'serviceStore'])->name('service-store');
+Route::get('employee-detail/{id}', [EmployeController::class, 'show'])->name('employee-detail');

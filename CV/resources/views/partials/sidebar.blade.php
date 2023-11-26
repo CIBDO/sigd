@@ -1,4 +1,5 @@
 <div class="sidebar" id="sidebar">
+
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
@@ -27,7 +28,7 @@
                                                        alt="img"><span> Services</span> <span class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{route('services-list')}}?type=DNTCP">DNTCP</a></li>
-                        <li><a href="{{route('services-list')}}?type=ACCP">ACCT</a></li>
+                        <li><a href="{{route('services-list')}}?type=ACCT">ACCT</a></li>
                         <li><a href="{{route('services-list')}}?type=RGD">RGD</a></li>
                         <li><a href="{{route('services-list')}}?type=PGT">PGT</a></li>
                         <li><a href="{{route('services-list')}}?type=TR">TR</a></li>

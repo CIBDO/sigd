@@ -15,7 +15,9 @@ class CvController extends Controller
      */
     public function index()
     {
-        return view('pages.CV.liste');
+        $employees = Employe::all();
+
+        return view('pages.CV.liste', compact('employees'));
     }
 
     /**
@@ -54,7 +56,7 @@ class CvController extends Controller
         $employee->first_name = $validatedData['prenom'];
         $employee->last_name = $validatedData['nom'];
         $employee->sexe = $validatedData['sexe'];
-        $employee->service = $validatedData['service'];
+        $employee->service = strtoupper($validatedData['service']);
         $employee->grade = $validatedData['grade'];
         $employee->corps = $validatedData['corps'];
 
@@ -63,7 +65,7 @@ class CvController extends Controller
                 // Stocker le fichier dans le système de fichiers
                 $path = $request->file('fichier')->store('dossier', 'public');
                 $cv = new Cv();
-                $cv->id_employee = $employee->id;
+                $cv->id_employee = $employee->employee_id;
                 $cv->path = $path;
                 $cv->save();
 
@@ -82,7 +84,7 @@ class CvController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Employe;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,7 +14,8 @@ class ServiceController extends Controller
     public function index()
     {
 //        dd(\request('type'));
-        return view('pages.Services.index');
+        $employees = Employe::where('service', request('type'))->get();
+        return view('pages.Services.index', compact('employees'));
     }
 
     /**

@@ -1,10 +1,9 @@
 <div class="main-wrapper">
-
     <div class="header">
 
         <div class="header-left active">
             <a href="index.html" class="logo">
-                <img src="assets/img/logo.png" alt="">
+                <img src="{{asset('assets/img/logo.png')}}" alt="">
             </a>
             <a href="index.html" class="logo-small">
                 <img src="assets/img/logo-small.png" alt="">
@@ -14,11 +13,11 @@
         </div>
 
         <a id="mobile_btn" class="mobile_btn" href="#sidebar">
-    <span class="bar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-    </span>
+        <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
         </a>
 
         <ul class="nav user-menu">
@@ -62,8 +61,8 @@
             </li>
             <li class="nav-item dropdown">
                 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                    <img src="assets/img/icons/notification-bing.svg" alt="img"> <span
-                        class="badge rounded-pill">4</span>
+                    <img src="assets/img/icons/notification-bing.svg" alt="img">
+                    <span class="badge rounded-pill">4</span>
                 </a>
                 <div class="dropdown-menu notifications">
                     <div class="topnav-dropdown-header">
@@ -75,9 +74,9 @@
                             <li class="notification-message">
                                 <a href="activities.html">
                                     <div class="media d-flex">
-    <span class="avatar flex-shrink-0">
-    <img alt="" src="assets/img/profiles/avatar-02.jpg">
-    </span>
+                                        <span class="avatar flex-shrink-0">
+                                            <img alt="" src="assets/img/profiles/avatar-02.jpg">
+                                        </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">John Doe</span> added new
                                                 task <span class="noti-title">Patient appointment booking</span></p>
@@ -89,9 +88,9 @@
                             <li class="notification-message">
                                 <a href="activities.html">
                                     <div class="media d-flex">
-    <span class="avatar flex-shrink-0">
-    <img alt="" src="assets/img/profiles/avatar-03.jpg">
-    </span>
+                                        <span class="avatar flex-shrink-0">
+                                        <img alt="" src="assets/img/profiles/avatar-03.jpg">
+                                        </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Tarah Shropshire</span>
                                                 changed the task name <span class="noti-title">Appointment booking with payment gateway</span>
@@ -104,9 +103,9 @@
                             <li class="notification-message">
                                 <a href="activities.html">
                                     <div class="media d-flex">
-    <span class="avatar flex-shrink-0">
-    <img alt="" src="assets/img/profiles/avatar-06.jpg">
-    </span>
+                                        <span class="avatar flex-shrink-0">
+                                        <img alt="" src="assets/img/profiles/avatar-06.jpg">
+                                        </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Misty Tison</span> added
                                                 <span class="noti-title">Domenic Houston</span> and <span
@@ -154,6 +153,7 @@
                 </div>
             </li>
 
+
             <li class="nav-item dropdown has-arrow main-drop">
                 <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
     <span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
@@ -192,5 +192,8 @@
                 <a class="dropdown-item" href="signin.html">Logout</a>
             </div>
         </div>
-
     </div>
+</div>
+
+
+

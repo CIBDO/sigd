@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Employe;
 use Illuminate\Http\Request;
 
 class EmployeController extends Controller
@@ -36,7 +37,9 @@ class EmployeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $employee = Employe::find($id);
+        $employee->cv = $employee->cv->first();
+        return view('pages.employee.details', compact('employee'));
     }
 
     /**
