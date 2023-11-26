@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : dim. 26 nov. 2023 à 16:20
+-- Généré le : dim. 26 nov. 2023 à 22:18
 -- Version du serveur : 5.7.39
 -- Version de PHP : 7.4.33
 
@@ -47,7 +47,9 @@ CREATE TABLE `cvs` (
 --
 
 INSERT INTO `cvs` (`cv_id`, `user_id`, `education`, `experience`, `skills`, `languages`, `certifications`, `hobbies`, `path`, `id_employee`, `created_at`, `updated_at`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dossier/kzwt5if2yQVqNxrglTpz631PLIjd51yVWsOCDRVL.png', 1, '2023-11-26 16:08:09', '2023-11-26 16:08:09');
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dossier/kzwt5if2yQVqNxrglTpz631PLIjd51yVWsOCDRVL.png', 1, '2023-11-26 16:08:09', '2023-11-26 16:08:09'),
+(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dossier/8sqZTvVlsQpM2wAUsXq9JPDp7pddyo8s2lkivVzJ.pdf', 2, '2023-11-26 22:11:49', '2023-11-26 22:11:49'),
+(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dossier/vB1vRZPqp08Hdxc6KgR5oN3HV4eNftpd8AuVF1ek.pdf', 3, '2023-11-26 22:14:50', '2023-11-26 22:14:50');
 
 -- --------------------------------------------------------
 
@@ -80,7 +82,9 @@ CREATE TABLE `employes` (
 --
 
 INSERT INTO `employes` (`employee_id`, `first_name`, `last_name`, `position`, `department`, `hire_date`, `salary`, `email`, `id_service`, `id_cv`, `matricule`, `grade`, `corps`, `sexe`, `service`, `created_at`, `updated_at`) VALUES
-(1, 'sdfsd', 'dfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfs', 'sdfsd', 'sdfsd', 'M', 'cifp', '2023-11-26 16:08:09', '2023-11-26 16:08:09');
+(1, 'sdfsd', 'dfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfs', 'sdfsd', 'sdfsd', 'M', 'CIFP', '2023-11-26 16:08:09', '2023-11-26 16:08:09'),
+(2, 'Aly', 'Kane', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '9870099', 'Informatique', 'Ingénieure', 'M', 'ACCT', '2023-11-26 22:11:49', '2023-11-26 22:11:49'),
+(3, 'Seydou', 'Sylla', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '9870091', 'Informatique', 'Ingénieure', 'M', 'ACCT', '2023-11-26 22:14:50', '2023-11-26 22:14:50');
 
 -- --------------------------------------------------------
 
@@ -169,13 +173,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `cvs`
 --
 ALTER TABLE `cvs`
-  MODIFY `cv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `employes`
 --
 ALTER TABLE `employes`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
