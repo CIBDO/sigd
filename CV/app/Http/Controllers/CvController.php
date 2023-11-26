@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Cv;
 use App\Models\Employe;
+use HepplerDotNet\FlashToastr\Flash;
 use Illuminate\Http\Request;
 
 class CvController extends Controller
@@ -22,6 +23,7 @@ class CvController extends Controller
      */
     public function create()
     {
+        Flash::info('Title','Message');
         return view('pages.CV.importe');
     }
 

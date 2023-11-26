@@ -28,7 +28,7 @@
     <div class="whirly-loader">
     </div>
 </div>
-
+@include('flash-toastr::message')
 
 @include('partials.header')
 @include('partials.sidebar')
