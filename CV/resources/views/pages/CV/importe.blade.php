@@ -30,16 +30,27 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
-                        <div class="form-group">
-                            <label>Sexe</label>
-                            <input type="text">
-                        </div>
+                    <div class="form-group">
+                        <label>Sexe</label>
+                        <select class="form-control" name="sexe">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-12">
+                    </div>
+                  <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
-                            <label>Servie</label>
-                            <input type="text">
-                        </div>
+                        <label>Services</label>
+                        <select class="form-control" name="sexe">
+                            <option value="cifp">CIFP</option>
+                            <option value="acct">ACCT</option>
+                            <option value="acct">PGT</option>
+                            <option value="acct">RGD</option>
+                            <option value="acct">TR</option>
+                            <option value="acct">RP</option>
+                            <option value="acct">DNTCP</option>
+                        </select>
+                    </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="form-group">
