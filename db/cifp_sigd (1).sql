@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : sam. 25 nov. 2023 à 23:09
+-- Généré le : dim. 26 nov. 2023 à 16:20
 -- Version du serveur : 5.7.39
 -- Version de PHP : 7.4.33
 
@@ -36,8 +36,18 @@ CREATE TABLE `cvs` (
   `languages` varchar(100) DEFAULT NULL,
   `certifications` text,
   `hobbies` text,
-  `path` varchar(255) DEFAULT NULL
+  `path` varchar(255) DEFAULT NULL,
+  `id_employee` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `cvs`
+--
+
+INSERT INTO `cvs` (`cv_id`, `user_id`, `education`, `experience`, `skills`, `languages`, `certifications`, `hobbies`, `path`, `id_employee`, `created_at`, `updated_at`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dossier/kzwt5if2yQVqNxrglTpz631PLIjd51yVWsOCDRVL.png', 1, '2023-11-26 16:08:09', '2023-11-26 16:08:09');
 
 -- --------------------------------------------------------
 
@@ -55,8 +65,22 @@ CREATE TABLE `employes` (
   `salary` decimal(10,2) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `id_service` int(11) DEFAULT NULL,
-  `id_cv` int(11) DEFAULT NULL
+  `id_cv` int(11) DEFAULT NULL,
+  `matricule` varchar(50) DEFAULT NULL,
+  `grade` varchar(100) DEFAULT NULL,
+  `corps` varchar(50) DEFAULT NULL,
+  `sexe` varchar(10) DEFAULT NULL,
+  `service` varchar(20) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `employes`
+--
+
+INSERT INTO `employes` (`employee_id`, `first_name`, `last_name`, `position`, `department`, `hire_date`, `salary`, `email`, `id_service`, `id_cv`, `matricule`, `grade`, `corps`, `sexe`, `service`, `created_at`, `updated_at`) VALUES
+(1, 'sdfsd', 'dfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfs', 'sdfsd', 'sdfsd', 'M', 'cifp', '2023-11-26 16:08:09', '2023-11-26 16:08:09');
 
 -- --------------------------------------------------------
 
@@ -140,6 +164,18 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `cvs`
+--
+ALTER TABLE `cvs`
+  MODIFY `cv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `employes`
+--
+ALTER TABLE `employes`
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `migrations`
