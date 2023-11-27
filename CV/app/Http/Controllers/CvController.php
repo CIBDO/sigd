@@ -25,7 +25,7 @@ class CvController extends Controller
      */
     public function create()
     {
-        Flash::info('Title','Message');
+        Flash::info('CV','archivé avec succès');
         return view('pages.CV.importe');
     }
 
