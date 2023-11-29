@@ -119,9 +119,9 @@
                                     <a class="me-3" href="{{route('employee-detail', ['id'=>$employee->employee_id])}}">
                                         <img src="{{asset('assets/img/icons/eye.svg')}}" alt="img">
                                     </a>
-                                    <a class="me-3" href="">
+                                    {{-- <a class="me-3" href="{{route('employee.edit', ['id'=>$employee->employee_id])}}">
                                         <img src="{{asset('assets/img/icons/edit.svg')}}" alt="img">
-                                    </a>
+                                    </a> --}}
                                     <a class="confirm-text" href="javascript:void(0);">
                                         <img src="{{asset('assets/img/icons/delete.svg')}}" alt="img">
                                     </a>

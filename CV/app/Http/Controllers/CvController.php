@@ -100,7 +100,33 @@ class CvController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $employee = Employee::findOrFail($id); // Assurez-vous que le modèle Employee est correctement utilisé
+
+        $employee->update([
+            'matricule' => $request->input('matricule'),
+            'first_name' => $request->input('prenom'),
+            'last_name' => $request->input('nom'),
+            'sexe' => $request->input('sexe'),
+            'service' => $request->input('service'),
+            'grade' => $request->input('grade'),
+            'corps' => $request->input('corps'),
+            // Ajoutez d'autres champs si nécessaire
+        ]);
+        if ($employee->save()) {
+            if ($request->hasFile('fichier')) {
+                // Stocker le fichier dans le système de fichiers
+                $path = $request->file('fichier')->store('dossier', 'public');
+                $cv = new Cv();
+                $cv->id_employee = $employee->employee_id;
+                $cv->path = $path;
+                $cv->save();
+
+                // Vous pouvez enregistrer $path dans votre base de données si nécessaire
+            }
+        } else {
+        }
+        // Vous pouvez ajouter d'autres actions ou rediriger selon vos besoins
+        return redirect()->route('cv-import-update', $employee->id)->with('success', 'Employé mis à jour avec succès');
     }
 
     /**

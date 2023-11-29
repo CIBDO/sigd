@@ -27,13 +27,17 @@
                         <img src="{{asset('assets/img/icons/settings.svg')}}"
                                                        alt="img"><span> Services</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a href="{{route('services-list')}}?type=DNTCP">DNTCP</a></li>
-                        <li><a href="{{route('services-list')}}?type=ACCT">ACCT</a></li>
-                        <li><a href="{{route('services-list')}}?type=RGD">RGD</a></li>
-                        <li><a href="{{route('services-list')}}?type=PGT">PGT</a></li>
-                        <li><a href="{{route('services-list')}}?type=TR">TR</a></li>
-                        <li><a href="{{route('services-list')}}?type=RP">RP</a></li>
-                        <li><a href="{{route('services-list')}}?type=CIFP">CIFP</a></li>
+                        <li><a href="{{route('services-list')}}?type=DBDF">Div Banques et Finances</a></li>
+                        <li><a href="{{route('services-list')}}?type=ACCT">Agence Comptable Centrale du Trésor</a></li>
+                        <li><a href="{{route('services-list')}}?type=RGD">Recette Générale du District</a></li>
+                        <li><a href="{{route('services-list')}}?type=PGT">Paierie Générale du Trésor</a></li>
+                        <li><a href="{{route('services-list')}}?type=TR">Trésoreries Régionales </a></li>
+                        <li><a href="{{route('services-list')}}?type=RP">Recettes Percetions</a></li>
+                        <li><a href="{{route('services-list')}}?type=CIFP">Cellule Informatique</a></li>
+                        <li><a href="{{route('services-list')}}?type=DA">Division Assurances</a></li>
+                        <li><a href="{{route('services-list')}}?type=DC">Division Contrôle</a></li>
+                        <li><a href="{{route('services-list')}}?type=DSCTOP">Div DSCTOP</a></li>
+                        <li><a href="{{route('services-list')}}?type=DCP">Div Comptabilité Publique</a></li>
                     </ul>
                 </li>
                 <li class="submenu">

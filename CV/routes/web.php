@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,13 @@ Route::get('users-list', [UserController::class, 'index'])->name('users-list');
 Route::get('setting-add-service', [SettingsController::class, 'serviceCreate'])->name('service-create');
 Route::post('setting-add-service', [HomeController::class, 'serviceStore'])->name('service-store');
 Route::get('employee-detail/{id}', [EmployeController::class, 'show'])->name('employee-detail');
+
+/* Route::get('employee/{id}/edit', [EmployeController::class, 'edit'])->name('employee.edit');
+Route::PUT('/employee/{id}', [EmployeController::class, 'update'])->name('employee.update');
+Route::delete('/employee/{id}', [EmployeController::class, 'destroy'])->name('employee.destroy');
+Route::put('/cv-import/{employee}', [CvImportController::class, 'update'])->name('cv-import-update');
+Route::put('/cv-import/{id}', [CvImportController::class, 'update'])->name('cv-import-update');
+ */
+Route::get('/edit-employee/{id}', [EmployeController::class, 'edit'])->name('edit.employee');
+Route::post('/update-employee/{id}', [EmployeController::class, 'update'])->name('update.employee');
+

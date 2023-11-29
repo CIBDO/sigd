@@ -1,73 +1,72 @@
 @extends('layouts.master')
+
 @section('content')
     <div class="content">
         <div class="page-header">
             <div class="page-title">
-                <h4>Import - CV</h4>
-                {{--                <h6>Create new product Category</h6>--}}
+                <h4>Modifier - CV</h4>
             </div>
         </div>
 
         <div class="card">
             <div class="card-body">
-                <form action="{{route('cv-import-store')}}" method="post" enctype="multipart/form-data">
-                    @csrf
+                <form action="{{ route('edit-employee')}}"
+                 enctype="multipart/form-data">
+            @csrf
+                    
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Matricule</label>
-                                <input type="text" name="matricule">
+                                <input type="text" name="matricule" value="{{ $employee->matricule }}" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Prénom</label>
-                                <input type="text" name="prenom">
+                                <input type="text" name="prenom" value="{{ $employee->first_name }}" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Nom</label>
-                                <input type="text" name="nom">
+                                <input type="text" name="nom" value="{{ $employee->last_name }}" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Sexe</label>
                                 <select class="form-control" name="sexe">
-                                    <option value="M">M</option>
-                                    <option value="F">F</option>
+                                    <option value="M" {{ $employee->sexe === 'M' ? 'selected' : '' }}>M</option>
+                                    <option value="F" {{ $employee->sexe === 'F' ? 'selected' : '' }}>F</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Services</label>
-                                <select class="form-control" name="service" >
-                                    <option value="cifp">CIFP</option>
-                                    <option value="acct">ACCT</option>
-                                    <option value="pgt">PGT</option>
-                                    <option value="rgd">RGD</option>
-                                    <option value="rt">TR</option>
-                                    <option value="rp">RP</option>
-                                    <option value="dbf">DBF</option>
-                                    <option value="da">DA</option>
-                                    <option value="dc">DC</option>
-                                    <option value="dcp">DCP</option>
-                                    <option value="dsctop">DSCTOP</option>
-                                </select>
-                            </div>
+                         <div class="form-group">
+                            <label>Services</label>
+                            <select class="form-control" name="service">
+                                @foreach(['cifp', 'acct', 'pgt', 'rgd', 'rt', 'rp', 'dbf', 'da', 
+                                'dc', 'dcp', 'dsctop'] as $option)
+                                    <option value="{{ $option }}" {{ $employee->service === $option ? 
+                                    'selected' : '' }}>
+                                        {{ strtoupper($option) }}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
+                    </div>
+
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Grade</label>
-                                <input type="text" name="grade">
+                                <input type="text" name="grade" value="{{ $employee->grade }}" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
                                 <label>Corps</label>
-                                <input type="text" name="corps">
+                                <input type="text" name="corps" value="{{ $employee->corps }}" required>
                             </div>
                         </div>
 
@@ -77,20 +76,24 @@
                                 <div class="image-upload">
                                     <input type="file" name="fichier">
                                     <div class="image-uploads">
-                                        <img src="assets/img/icons/upload.svg" alt="img">
+                                     @if($employee->cv_path)
+                                            <img src="{{ asset('storage/' . $employee->cv_path) }}" alt="img">
+                                        @else
+                                            <img src="{{ asset('assets/img/icons/upload.svg') }}" alt="img">
+                                        @endif
+                                        <img src="{{('assets/img/icons/upload.svg')}}" alt="img">
                                         <h4>Drag and drop a file to upload</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <button type="submit" class="btn btn-submit me-2">Charger</button>
-                            <a href="categorylist.html" class="btn btn-cancel">Quitter</a>
+                            <button type="submit" class="btn btn-submit me-2">Mise à jour</button>
+                            <a href="{{route('cv-list')}}" class="btn btn-cancel">Quitter</a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
 @endsection
