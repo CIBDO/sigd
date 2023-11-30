@@ -122,8 +122,26 @@
                                      <a class="me-3" href="{{route('edit.employee', ['id'=>$employee->employee_id])}}">
                                         <img src="{{asset('assets/img/icons/edit.svg')}}" alt="img">
                                     </a>
-                                    <a class="confirm-text" href="javascript:void(0);">
-                                        <img src="{{asset('assets/img/icons/delete.svg')}}" alt="img">
+                                    {{-- <a class="confirm-text" href=" {{ route('employee.destroy', 
+                                    ['id' => $employee->employee_id])">
+                                        <img src="{{asset('assets/img/icons/delete.svg')}}" alt="img"> --}}
+                                        
+                                            {{-- <button type="submit" class="btn btn-submit me-2">Mise à jour</button> --}}
+                                            <a href="{{ route('employee.destroy', ['id' => $employee->employee_id]) }}"
+                                             class="" onclick="event.preventDefault(); 
+                                             if(confirm('Êtes-vous sûr de vouloir supprimer cet employé?')) 
+                                             document.getElementById('delete-form').submit();">
+                                                <img src="{{asset('assets/img/icons/delete.svg')}}" alt="img">
+                                            </a>
+                                            <a href="{{ route('cv-list') }}"></a>
+                                        
+
+                                        <!-- Formulaire pour la suppression (à cacher par défaut) -->
+                                        <form id="delete-form" action="{{ route('employee.destroy', 
+                                        ['id' => $employee->employee_id]) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </a>
                                 </td>
                             </tr>

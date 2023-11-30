@@ -90,8 +90,20 @@ class EmployeController extends Controller
     }
     public function destroy(string $id)
     {
-        $employee = Employe::find($id);
+        /* $employee = Employe::find($id);
         $employee->delete();
-        return redirect()->route('employee.index')->with('success', 'Employé supprimé avec succès');
+        return redirect()->route('cv-list')->with('success', 'Employé supprimé avec succès'); */
+        $employee = Employe::find($id);
+
+        if (!$employee) {
+            return redirect()->route('cv-list')->with('error', 'Employé non trouvé');
+        }
+    
+        $employee->delete();
+    
+        return redirect()->route('cv-list')->with('success', 'Employé supprimé avec succès');
     }
+    
+
+    
 }

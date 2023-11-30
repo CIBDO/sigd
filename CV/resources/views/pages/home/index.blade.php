@@ -108,14 +108,14 @@
                 <div class="row align-items-center">
                     <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="assetss/img/illustrations/hero.png" alt="hero-header" /></div>
                     <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-8">
-                        <h1 class="fw-normal fs-6 fs-xxl-7">Cellule Informatique (DNTCP)</h1>
+                        {{-- <h1 class="fw-normal fs-6 fs-xxl-7">Cellule Informatique (DNTCP)</h1>
                         <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2">Gestion des CV.</h1>
-
+ --}}
                     </div>
                 </div>
             </div>
         </section>
-        <section id="findUs">
+        {{-- <section id="findUs">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-5 mb-6 text-center">
@@ -146,7 +146,7 @@
                 </div>
             </div>
            
-        </section>
+        </section> --}}
         
     </main>
     <script src="{{('vendors/@popperjs/popper.min.js')}}"></script>

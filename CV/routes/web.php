@@ -42,4 +42,5 @@ Route::put('/cv-import/{id}', [CvImportController::class, 'update'])->name('cv-i
 Route::get('/edit-employee/{id}', [EmployeController::class, 'edit'])->name('edit.employee');
 Route::post('/edit-employee/{id}', [EmployeController::class, 'update'])->name('update.employee');
 Route::post('/update-employee/{id}', [EmployeController::class, 'update'])->name('update.employee');
+Route::delete('/employee/{id}', [EmployeController::class, 'destroy'])->name('employee.destroy');
 

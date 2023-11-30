@@ -47,11 +47,11 @@
                             <div class="form-group">
                                 <label>Services</label>
                                 <select class="form-control" name="service">
-                                    @foreach(['cifp', 'acct', 'pgt', 'rgd', 'rt', 'rp', 'dbf', 'da',
-                                    'dc', 'dcp', 'dsctop'] as $option)
+                                    @foreach(['CIFP', 'ACCT', 'PGT', 'RGD', 'TR', 'RP', 'DBF', 'DA',
+                                    'DC', 'DCP', 'DSCTOP'] as $option)
                                         <option value="{{ $option }}" {{ $employee->service === $option ?
                                     'selected' : '' }}>
-                                            {{ strtoupper($option) }}
+                                            {{($option) }}
                                         </option>
                                     @endforeach
                                 </select>
