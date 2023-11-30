@@ -78,13 +78,13 @@
                                     <input type="file" name="fichier">
                                     <div class="image-uploads">
                                         <img src="assets/img/icons/upload.svg" alt="img">
-                                        <h4>Drag and drop a file to upload</h4>
+                                        <h4>Glissez-déposez le fichier pour télécharger</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <button type="submit" class="btn btn-submit me-2">Charger</button>
+                            <button type="submit" class="btn btn-submit me-2">Archiver</button>
                             <a href="categorylist.html" class="btn btn-cancel">Quitter</a>
                         </div>
                     </div>

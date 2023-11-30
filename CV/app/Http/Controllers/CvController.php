@@ -25,7 +25,7 @@ class CvController extends Controller
      */
     public function create()
     {
-        Flash::info('CV','archivé avec succès');
+        //Flash::info('CV','archivé avec succès');
         return view('pages.CV.importe');
     }
 
@@ -68,7 +68,7 @@ class CvController extends Controller
                 $cv->id_employee = $employee->employee_id;
                 $cv->path = $path;
                 $cv->save();
-
+                Flash::info('CV', 'archivé avec succès');
                 // Vous pouvez enregistrer $path dans votre base de données si nécessaire
             }
         } else {
@@ -120,7 +120,7 @@ class CvController extends Controller
                 $cv->id_employee = $employee->employee_id;
                 $cv->path = $path;
                 $cv->save();
-
+                Flash::info('Employé', 'mise à jour effectuée avec succès');
                 // Vous pouvez enregistrer $path dans votre base de données si nécessaire
             }
         } else {

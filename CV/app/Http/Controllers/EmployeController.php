@@ -100,7 +100,7 @@ class EmployeController extends Controller
         }
     
         $employee->delete();
-    
+        Flash::info('Employé', 'supprimé avec succès');
         return redirect()->route('cv-list')->with('success', 'Employé supprimé avec succès');
     }
     
