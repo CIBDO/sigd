@@ -10,10 +10,11 @@
 
         <div class="card">
             <div class="card-body">
-                <form action="{{ route('edit-employee')}}"
-                 enctype="multipart/form-data">
-            @csrf
-                    
+                <form action="{{ route('update.employee', ['id' => $employee->employee_id]) }}"
+                      method="POST"
+                      enctype="multipart/form-data">
+                    @csrf
+
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
@@ -43,19 +44,19 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
-                         <div class="form-group">
-                            <label>Services</label>
-                            <select class="form-control" name="service">
-                                @foreach(['cifp', 'acct', 'pgt', 'rgd', 'rt', 'rp', 'dbf', 'da', 
-                                'dc', 'dcp', 'dsctop'] as $option)
-                                    <option value="{{ $option }}" {{ $employee->service === $option ? 
+                            <div class="form-group">
+                                <label>Services</label>
+                                <select class="form-control" name="service">
+                                    @foreach(['cifp', 'acct', 'pgt', 'rgd', 'rt', 'rp', 'dbf', 'da',
+                                    'dc', 'dcp', 'dsctop'] as $option)
+                                        <option value="{{ $option }}" {{ $employee->service === $option ?
                                     'selected' : '' }}>
-                                        {{ strtoupper($option) }}
-                                    </option>
-                                @endforeach
-                            </select>
+                                            {{ strtoupper($option) }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                    </div>
 
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
@@ -74,15 +75,15 @@
                             <div class="form-group">
                                 <label> Fichier </label>
                                 <div class="image-upload">
-                                    <input type="file" name="fichier">
+                                    <input type="file" name="cv">
                                     <div class="image-uploads">
-                                     @if($employee->cv_path)
+                                        @if($employee->cv_path)
                                             <img src="{{ asset('storage/' . $employee->cv_path) }}" alt="img">
                                         @else
                                             <img src="{{ asset('assets/img/icons/upload.svg') }}" alt="img">
                                         @endif
-                                        <img src="{{('assets/img/icons/upload.svg')}}" alt="img">
-                                        <h4>Drag and drop a file to upload</h4>
+                                        {{--                                        <img src="{{('assets/img/icons/upload.svg')}}" alt="img">--}}
+                                        <h4>Glisser-déposer un fichier à uploader</h4>
                                     </div>
                                 </div>
                             </div>

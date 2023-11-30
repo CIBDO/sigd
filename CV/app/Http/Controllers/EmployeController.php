@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cv;
 use App\Models\Employe;
+use HepplerDotNet\FlashToastr\Flash;
 use Illuminate\Http\Request;
 
 class EmployeController extends Controller
@@ -45,15 +47,16 @@ class EmployeController extends Controller
     {
         /* $employee = Employe::find($id);
         return view('pages.employee.edit', compact('employee')); */
-        $employee = Employee::find($id);
-        return view('employees.edit', compact('employee'));
+        $employee = Employe::find($id);
+        return view('pages.employee.edit', compact('employee'));
     }
     public function update(Request $request, string $id)
     {
+//        dd($request->all());
         // Validation des données du formulaire
         $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
+            'prenom' => 'required|string|max:255',
+            'nom' => 'required|string|max:255',
             'matricule' => 'required|string|max:255',
             'grade' => 'required|string|max:255',
             'corps' => 'required|string|max:255',
@@ -62,31 +65,32 @@ class EmployeController extends Controller
             'cv' => 'file|mimes:pdf|', // Assurez-vous que le fichier est un fichier PDF et ne dépasse pas 2 Mo.
         ]);
 
-        $employee = Employee::find($id);
-        $employee->first_name = $request->input('first_name');
-        $employee->last_name = $request->input('last_name');
+        $employee = Employe::find($id);
+        $employee->first_name = $request->input('prenom');
+        $employee->last_name = $request->input('nom');
         $employee->matricule = $request->input('matricule');
         $employee->grade = $request->input('grade');
         $employee->corps = $request->input('corps');
         $employee->sexe = $request->input('sexe');
         $employee->service = $request->input('service');
-         
+
 
         // Gestion du fichier CV
-        /* if ($request->hasFile('cv')) {
-            $cvFile = $request->file('cv');
-            $cvFileName = 'cv_' . time() . '.' . $cvFile->getClientOriginalExtension();
-            $cvPath = $cvFile->storeAs('cv', $cvFileName, 'public');
-            $employee->cv_path = $cvPath;
-        } */
+        if ($request->hasFile('cv')) {
+            $path = $request->file('cv')->store('dossier', 'public');
+            $cv = Cv::where('id_employee', $employee->employee_id)->first();
+            $cv->path = $path;
+            $cv->save();
+        }
 
         $employee->save();
+        Flash::info('Employé', 'modifié avec succès');
 
-        return redirect()->route('employee.index')->with('success', 'Employé modifié ');
+        return redirect()->route('cv-list')->with('success', 'Employé modifié ');
     }
     public function destroy(string $id)
     {
-        $employee = Employee::find($id);
+        $employee = Employe::find($id);
         $employee->delete();
         return redirect()->route('employee.index')->with('success', 'Employé supprimé avec succès');
     }

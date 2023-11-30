@@ -40,5 +40,6 @@ Route::put('/cv-import/{employee}', [CvImportController::class, 'update'])->name
 Route::put('/cv-import/{id}', [CvImportController::class, 'update'])->name('cv-import-update');
  */
 Route::get('/edit-employee/{id}', [EmployeController::class, 'edit'])->name('edit.employee');
+Route::post('/edit-employee/{id}', [EmployeController::class, 'update'])->name('update.employee');
 Route::post('/update-employee/{id}', [EmployeController::class, 'update'])->name('update.employee');
 

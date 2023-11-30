@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cv extends Model
 {
     use HasFactory;
-   
+
+    protected $primaryKey = 'cv_id';
 }
