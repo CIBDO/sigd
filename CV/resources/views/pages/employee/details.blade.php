@@ -25,14 +25,22 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="page-btn">
-                            <a href="{{Storage::url($employee->cv->path)}}" download class="btn btn-added" style="    background: #ff9f43;
-    padding: 7px 15px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;">
+                            <a href="{{Storage::url($employee->cv->path)}}" download class="btn btn-added" style="   
+                             background: #ff9f43;
+                                    padding: 7px 15px;
+                                    color: #fff;
+                                    font-weight: 700;
+                                    font-size: 14px;">
                                 <img src="{{asset('assets/img/icons/plus.svg')}}" alt="img" class="me-1">
                                 Téléchargé le CV
                             </a>
+                            <a href="{{ route('cv-list') }}" class="btn btn-added" style="   
+                             background: #ff9f43;
+                                    padding: 7px 15px;
+                                    color: #fff;
+                                    font-weight: 700;
+                                    font-size: 14px;"><img src="{{asset('assets/img/icons/plus.svg')}}" alt="img"
+                                                                    class="me-1">Liste CV</a>
                         </div>
 
                     </div>
