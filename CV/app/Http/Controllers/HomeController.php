@@ -19,10 +19,10 @@ class HomeController extends Controller
     $employeHommeCount = Employe::where('sexe', 'M')->count();
     $employeFemmeCount = Employe::where('sexe', 'F')->count();
 
-    $employeParCorps = Employe::select('corps', DB::raw('count(*) as count'))
-        ->groupBy('corps')
+    $employeParCorps = Employe::select('localite', DB::raw('count(*) as count'))
+        ->groupBy('localite')
         ->get(); 
-        $employeParCorpsTresor = Employe::where('grade', 'trésor')->count();
+        $employeParCorpsTresor = Employe::where('cadre', 'trésor')->count();
     $dashCounts = [
         ['class' => 'total-employes', 'label' => 'Total des Employes', 'icon' => 'user', 'value' => $totalemployes],
         ['class' => 'employe-homme', 'label' => 'Employes Homme', 'icon' => 'user-check', 'value' => $employeHommeCount],

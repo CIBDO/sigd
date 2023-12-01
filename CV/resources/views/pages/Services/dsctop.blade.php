@@ -49,8 +49,8 @@
                  <th>Nom </th>
                  <th>Sexe</th>
                  <th>Services</th>
-                 <th>Grade</th>
-                 <th>Corps</th>
+                 <th>Cadre</th>
+                 <th>Localité</th>
                  <th>Action</th>
              </tr>
          </thead>

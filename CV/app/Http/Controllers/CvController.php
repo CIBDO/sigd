@@ -42,8 +42,8 @@ class CvController extends Controller
             'nom' => 'required|string',
             'sexe' => 'required|in:M,F',
             'service' => 'required|string',
-            'grade' => 'required|string',
-            'corps' => 'required|string',
+            'cadre' => 'required|string',
+            'localite' => 'required|string',
             'fichier' => 'required|file',
         ]);
 
@@ -57,8 +57,8 @@ class CvController extends Controller
         $employee->last_name = $validatedData['nom'];
         $employee->sexe = $validatedData['sexe'];
         $employee->service = strtoupper($validatedData['service']);
-        $employee->grade = $validatedData['grade'];
-        $employee->corps = $validatedData['corps'];
+        $employee->cadre = $validatedData['cadre'];
+        $employee->localite = $validatedData['localite'];
 
         if ($employee->save()) {
             if ($request->hasFile('fichier')) {
@@ -108,8 +108,8 @@ class CvController extends Controller
             'last_name' => $request->input('nom'),
             'sexe' => $request->input('sexe'),
             'service' => $request->input('service'),
-            'grade' => $request->input('grade'),
-            'corps' => $request->input('corps'),
+            'cadre' => $request->input('cadre'),
+            'localite' => $request->input('localite'),
             // Ajoutez d'autres champs si nécessaire
         ]);
         if ($employee->save()) {

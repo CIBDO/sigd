@@ -60,14 +60,14 @@
 
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Grade</label>
-                                <input type="text" name="grade" value="{{ $employee->grade }}" required>
+                                <label>Cadre</label>
+                                <input type="text" name="cadre" value="{{ $employee->cadre }}" required>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Corps</label>
-                                <input type="text" name="corps" value="{{ $employee->corps }}" required>
+                                <label>Localité</label>
+                                <input type="text" name="localite" value="{{ $employee->localite }}" required>
                             </div>
                         </div>
 

@@ -88,8 +88,8 @@
                             <th>Prénom</th>
                             <th>Nom</th>
                             <th>Sexe</th>
-                            <th>Grade</th>
-                            <th>Corps</th>
+                            <th>Cadre</th>
+                            <th>Localité</th>
                             <th>Services</th>
                             <th class="text-center">Action</th>
                         </tr>
@@ -112,8 +112,8 @@
                                 <td>{{$employee->first_name}}</td>
                                 <td>{{$employee->last_name}}</td>
                                 <td>{{$employee->sexe}}</td>
-                                <td>{{$employee->grade}}</td>
-                                <td>{{$employee->corps}}</td>
+                                <td>{{$employee->cadre}}</td>
+                                <td>{{$employee->localite}}</td>
                                 <td>{{$employee->service}}</td>
                                 <td>
                                     <a class="me-3" href="{{route('employee-detail', ['id'=>$employee->employee_id])}}">

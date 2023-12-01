@@ -60,14 +60,14 @@
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Grade</label>
-                                <input type="text" name="grade">
+                                <label>Cadre</label>
+                                <input type="text" name="cadre">
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <label>Corps</label>
-                                <input type="text" name="corps">
+                                <label>Localité</label>
+                                <input type="text" name="localite">
                             </div>
                         </div>
 

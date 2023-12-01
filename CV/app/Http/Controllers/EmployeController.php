@@ -58,8 +58,8 @@ class EmployeController extends Controller
             'prenom' => 'required|string|max:255',
             'nom' => 'required|string|max:255',
             'matricule' => 'required|string|max:255',
-            'grade' => 'required|string|max:255',
-            'corps' => 'required|string|max:255',
+            'cadre' => 'required|string|max:255',
+            'localite' => 'required|string|max:255',
             'sexe' => 'required|string|max:255',
             'service' => 'required|string|max:255',
             'cv' => 'file|mimes:pdf|', // Assurez-vous que le fichier est un fichier PDF et ne dépasse pas 2 Mo.
@@ -69,8 +69,8 @@ class EmployeController extends Controller
         $employee->first_name = $request->input('prenom');
         $employee->last_name = $request->input('nom');
         $employee->matricule = $request->input('matricule');
-        $employee->grade = $request->input('grade');
-        $employee->corps = $request->input('corps');
+        $employee->cadre = $request->input('cadre');
+        $employee->localite = $request->input('localite');
         $employee->sexe = $request->input('sexe');
         $employee->service = $request->input('service');
 
