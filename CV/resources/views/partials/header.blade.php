@@ -1,6 +1,5 @@
-<div class="main-wrapper">
+<div class="main-wrapper slide-nav">
     <div class="header">
-
         <div class="header-left active">
             <a href="{{route('dashboard')}}" class="logo">
                 <img src="{{asset('assets/img/logo.png')}}" alt="">
@@ -13,11 +12,11 @@
         </div>
 
         <a id="mobile_btn" class="mobile_btn" href="#sidebar">
-        <span class="bar-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>
+            <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </a>
 
         <ul class="nav user-menu">
@@ -47,7 +46,7 @@
                     <a href="javascript:void(0);" class="dropdown-item">
                         <img src="{{asset('assets/img/flags/us.png')}}" alt="" height="16"> Mali
                     </a>
-            
+
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -60,7 +59,7 @@
                         <span class="notification-title">Notifications</span>
                         <a href="javascript:void(0)" class="clear-noti"> Effacer tous </a>
                     </div>
-                    <div class="noti-content">
+                    {{-- <div class="noti-content">
                         <ul class="notification-list">
                             <li class="notification-message">
                                 <a href="activities.html">
@@ -80,7 +79,7 @@
                                 <a href="activities.html">
                                     <div class="media d-flex">
                                         <span class="avatar flex-shrink-0">
-                                        <img alt="" src="{{asset('assets/img/profiles/avatar-03.jpg')}}">
+                                            <img alt="" src="{{asset('assets/img/profiles/avatar-03.jpg')}}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Tarah Shropshire</span>
@@ -95,13 +94,11 @@
                                 <a href="activities.html">
                                     <div class="media d-flex">
                                         <span class="avatar flex-shrink-0">
-                                        <img alt="" src="{{asset('assets/img/profiles/avatar-06.jpg')}}">
+                                            <img alt="" src="{{asset('assets/img/profiles/avatar-06.jpg')}}">
                                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Misty Tison</span> added
-                                                <span class="noti-title">Domenic Houston</span> and <span
-                                                    class="noti-title">Claire Mapes</span> to project <span
-                                                    class="noti-title">Doctor available module</span></p>
+                                                <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
                                             <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
                                         </div>
                                     </div>
@@ -110,9 +107,9 @@
                             <li class="notification-message">
                                 <a href="activities.html">
                                     <div class="media d-flex">
-    <span class="avatar flex-shrink-0">
-    <img alt="" src="{{asset('assets/img/profiles/avatar-17.jpg')}}">
-    </span>
+                                        <span class="avatar flex-shrink-0">
+                                            <img alt="" src="{{asset('assets/img/profiles/avatar-17.jpg')}}">
+                                        </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Rolland Webber</span>
                                                 completed task <span class="noti-title">Patient and Doctor video conferencing</span>
@@ -125,9 +122,9 @@
                             <li class="notification-message">
                                 <a href="activities.html">
                                     <div class="media d-flex">
-    <span class="avatar flex-shrink-0">
-    <img alt="" src="{{asset('assets/img/profiles/avatar-13.jpg')}}">
-    </span>
+                                        <span class="avatar flex-shrink-0">
+                                            <img alt="" src="{{asset('assets/img/profiles/avatar-13.jpg')}}">
+                                        </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details"><span class="noti-title">Bernardo Galaviz</span>
                                                 added new task <span class="noti-title">Private chat module</span></p>
@@ -137,7 +134,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <div class="topnav-dropdown-footer">
                         <a href="activities.html">View all Notifications</a>
                     </div>
@@ -147,34 +144,30 @@
 
             <li class="nav-item dropdown has-arrow main-drop">
                 <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
-    <span class="user-img"><img src="{{asset('assets/img/profiles/avator1.jpg')}}" alt="">
-    <span class="status online"></span></span>
+                    <span class="user-img"><img src="{{asset('assets/img/profiles/avator1.jpg')}}" alt="">
+                        <span class="status online"></span></span>
                 </a>
                 <div class="dropdown-menu menu-drop-user">
                     <div class="profilename">
                         <div class="profileset">
-    <span class="user-img"><img src="{{asset('assets/img/profiles/avator1.jpg')}}" alt="">
-    <span class="status online"></span></span>
+                            <span class="user-img"><img src="{{asset('assets/img/profiles/avator1.jpg')}}" alt="">
+                                <span class="status online"></span></span>
                             <div class="profilesets">
                                 <h6>Djibril KEÏTA</h6>
                                 <h5>Admin</h5>
                             </div>
                         </div>
                         <hr class="m-0">
-                        <a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> 
+                        <a class="dropdown-item" href=""> <i class="me-2" data-feather="user"></i>
                             Profil</a>
-                        <a class="dropdown-item" href="generalsettings.html"><i class="me-2"
-                                                                                data-feather="settings"></i>Paramètres</a>
+                        <a class="dropdown-item" href="general"><i class="me-2" data-feather="settings"></i>Paramètres</a>
                         <hr class="m-0">
-                        <a class="dropdown-item logout pb-0" href="signin.html"><img src="{{asset('assets/img/icons/log-out.svg')}}"
-                                                                                     class="me-2" alt="img">Déconexion</a>
+                        <a class="dropdown-item logout pb-0" href=""><img src="{{asset('assets/img/icons/log-out.svg')}}" class="me-2" alt="img">Déconexion</a>
                     </div>
                 </div>
             </li>
         </ul>
-
-
-        <div class="dropdown mobile-user-menu">
+        {{-- <div class="dropdown mobile-user-menu">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -182,9 +175,7 @@
                 <a class="dropdown-item" href="generalsettings.html">Settings</a>
                 <a class="dropdown-item" href="signin.html">Logout</a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
-
-
 
